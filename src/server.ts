@@ -10,6 +10,20 @@ const app = express();
  * DELETE => Remover um dado
  * PATCH  => Alterar uma informação específica
  */
+
+/**
+ * Tipos de parâmetros:
+ * 
+ * Routes params => http://localhost:3000/produtos/965464984 -> id usado para a busca de algum item ou dado
+ * 
+ * Query params  => http://localhost:3000/produtos?name=teclado&description=teclado+bom
+ * 
+ * Body params   => {
+ *     "name": "teclado",
+ *     "desciption": "teclado bom"
+ * }
+ */
+
 app.get('/test', ( request, response ) => {
     // request => Tudo que está entrando
     // response => tudo que está saindo
