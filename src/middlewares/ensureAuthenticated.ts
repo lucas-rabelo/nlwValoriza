@@ -20,7 +20,7 @@ export function ensureAuthenticated(
     const [, token] = authToken.split(' ');
     
     try {
-        const { sub } = verify(token, '484a7c311864834e9827a313e78cf575') as IPayload;
+        const { sub } = verify(token, process.env.JWT_SECRET) as IPayload;
         
         // Recuperar informações do usuário 
         request.user_id = sub;
